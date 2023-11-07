@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 // Import JSON data
-const colors = require('../public/config.json');
+const colors = require('../../public/config.json');
 
 // Transform JSON data to SCSS variables
 const scssVariables = Object.entries(colors)
@@ -10,4 +10,4 @@ const scssVariables = Object.entries(colors)
   .join('\n');
 
 // Write SCSS variables to a SCSS file
-fs.writeFileSync('./src/colors.scss', scssVariables);
+fs.writeFileSync('./src/assets/common/colors.scss', scssVariables);
